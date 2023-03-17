@@ -3,7 +3,7 @@
 //  Designer    : Luca Sauer de Araujo 
 //  Description : Controller element used for asynchronous neuron.
 //==============================================================================
-module MG_rst_on #(
+module MG_rst_on (
     input logic a,
     input logic b,
     input logic rst,
