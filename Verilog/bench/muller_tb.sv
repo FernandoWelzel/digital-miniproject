@@ -9,14 +9,14 @@ timeunit      1ns;
 timeprecision 1ns;
 
 bit rst;        
-
-logic [2:0] data_in, data_out;
+logic [1:0] data_in;
+logic       data_out;
 
 // Muller gate
-muller muller_1 #( parameter size = 2 ) (
+muller #( .size(2) ) muller1 (
   .data_in      ( data_in  ),   // Data input bus
   .data_out     ( data_out ),   // Data output value
-  .rst          ( rst      ),   // Reset
+  .rst          ( rst      )    // Reset
 );
 
 // Monitor Results format
@@ -26,16 +26,19 @@ initial $timeformat ( -9, 1, " ns", 12 );
 initial  forever
     begin
         rst = 0;
-        data_in = 2b'00;
+        data_in = 2'b00;
 
         // Reset
         #10 rst = 1;
         #10 rst = 0;
 
         // Stimulus
-        #10 data_in = 2b'01;
-        #10 data_in = 2b'10;
-        #10 data_in = 2b'11;
+        #10 data_in = 2'b01;
+        #10 data_in = 2'b10;
+        #10 data_in = 2'b11;
+	#10 data_in = 2'b10;
+	#10 data_in = 2'b00;
+        #10;
     end                                                                        
 
 endmodule
