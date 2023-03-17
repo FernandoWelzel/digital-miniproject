@@ -4,7 +4,7 @@ input logic req_in;
 input logic ack_out;
 input logic rst;
 
-output logic req_out;
+output logic req_out
 );
 logic req_out_m;
 
