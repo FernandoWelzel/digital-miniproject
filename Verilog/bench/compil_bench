@@ -1,0 +1,9 @@
+vdel -lib  ${TP_PATH}/libs/lib_BENCH -all
+
+vlib ${TP_PATH}/libs/lib_BENCH
+
+vmap lib_BENCH ${TP_PATH}/libs/lib_BENCH
+
+vlog +acc -work lib_BENCH ${TP_PATH}/rtl/muller.sv 
+
+vlog +acc -work lib_BENCH ${TP_PATH}/bench/*.sv
