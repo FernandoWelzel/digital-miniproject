@@ -8,7 +8,7 @@ output logic req_out
 );
 logic req_out_m;
 
-assign req_out = req_in*(!ack_out) + (req_in + !ack_out)*
+assign req_out = req_in*(~ack_out) + (req_in + ~ack_out)*
 
 
 always_ff@(req_out,rst)
