@@ -33,12 +33,15 @@ initial  forever
         #10 rst = 0;
 
         // Stimulus
+	#10 data_in = 2'b00;
         #10 data_in = 2'b01;
         #10 data_in = 2'b10;
         #10 data_in = 2'b11;
-	#10 data_in = 2'b10;
-	#10 data_in = 2'b00;
         #10;
+
+        // Reset
+	#10 rst = 1;
+        #10 rst = 0;
     end                                                                        
 
 endmodule
