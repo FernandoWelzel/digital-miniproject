@@ -22,5 +22,5 @@ endmodule
 
 
 
-
+// pour inclure un module dans un autre, il faut d'abord écrire le nom du module comme il est défini dans son fichier puis lui donner le nom qu'on veut)
 
