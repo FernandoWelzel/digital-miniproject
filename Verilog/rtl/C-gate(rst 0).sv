@@ -1,4 +1,6 @@
-module Muller_C_Gate(req_in,ack_out,rst,req_out);
+module Muller_C_Gate(req_in,ack_out,rst,req_out)
+
+
 input logic req_in;
 input logic ack_out;
 input logic rst;
@@ -18,6 +20,7 @@ begin
         req_out_m <= b'0;
     else req_out_m <= req_out;
 
+end
 end
 
 endmodule

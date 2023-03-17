@@ -19,5 +19,6 @@ begin
     else req_out_m <= req_out;
 
 end
+end
 
 endmodule
