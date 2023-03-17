@@ -10,7 +10,7 @@ module ctrl_rst (
 
 );
 
-Muller MG_rst_on(a.(req_in),data_out.(req_out),rst.(rst),b.(ack_out));
+Muller MG_rst_on(a.(req_in),b.(ack_out),rst.(rst),data_out.(req_out));
 assign ack_in = req_out;
 assign crtl_out = req_out;
 
