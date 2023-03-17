@@ -1,4 +1,4 @@
-module Muller_C_Gate(
+module Muller_Gate_1(
 input logic req_in;
 input logic ack_out;
 input logic rst;
