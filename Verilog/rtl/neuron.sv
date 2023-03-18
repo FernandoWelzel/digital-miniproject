@@ -1,12 +1,12 @@
 //==============================================================================
 //  Filename    : Neuron                                         
-//  Designer    : Fernando WELZEL ENGELS
+//  Designer    : Fernando WELZEL
 //  Description : Parametric spiking neuron desing to be used in neural networks.
 //==============================================================================
 module neuron #(
-  parameter integer                        n_size = 32,   // Number size - Number of bits of the input numbers
-  parameter integer                        b_size = 32,   // Bus size - Number of inputs of our neuron
-  parameter integer       o_size = 2*n_size + b_size/2 // Size of output number 
+  parameter integer                        n_size = 32, // Number size - Number of bits of the input numbers
+  parameter integer                        b_size = 32, // Bus size - Number of inputs of our neuron
+  parameter integer       o_size = 2*n_size + b_size/2  // Size of output number 
   )(
   input  logic        [b_size-1:0][n_size-1:0] data_in, // Input values
   input  logic        [b_size-1:0][n_size-1:0] weights, // Weights to be applied to the numbers

@@ -19,6 +19,7 @@ always_ff @* begin
         if ( data_in == 0 ) begin
             data_out <= 0;    
         end
+        // If all bits in data_in are 1 -> Changes data_out to 1
         else if ( &data_in ) begin
             data_out <= 1;
         end

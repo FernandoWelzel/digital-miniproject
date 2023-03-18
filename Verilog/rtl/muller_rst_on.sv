@@ -1,35 +1,35 @@
 //==============================================================================
-//  Filename    : Controller                                         
-//  Designer    : Luca Sauer de Araujo 
-//  Description : Controller element used for asynchronous neuron.
+//  Filename    : muller_rst_on.sv                                         
+//  Designer    : Luca Sauer de Araujo
+//  Reviewer    : Fernando WELZEL
+//  Description : Parametric RESET-ON muller gate (C element). This element will
+//                store a high value after reset.
 //==============================================================================
-module MG_rst_on (
-    input logic a,
-    input logic b,
-    input logic rst,
-    output logic z
+module muller_rst_on #(
+  parameter               size = 2   // Size - Number of inputs
+  )(
+  input  logic [size-1:0]  data_in,  // Input values
+  input  logic                 rst,  // Asyncronous posedge reset -> data_out = 1
+  output logic            data_out   // Output value
 );
 
-// Definition of variables
-wire w1, w2, w3, w4, w5;
-logic z = 0;
+// == Main Code ================================================================
+always_ff @* begin
 
-always_ff @ (posedge rst, a, b) begin 
-    if (rst == 1)
-    begin
-        w1 = 1;
-        w2 = 0;
-        w3 = 0;
-        w4 = 0;
+    if ( rst ) data_out <= 1;
+    else begin
+        if ( data_in == 0 ) begin
+            data_out <= 0;    
+        end
+        // If all bits in data_in are 1 -> Changes data_out to 1
+        else if ( &data_in ) begin
+            data_out <= 1;
+        end
+        else begin
+            data_out <= data_out;
+        end
     end
-    else
-    begin
-        w3 = w1 & ~w2;
-        w4 = w1 | ^w2;
-        w5 = w4 & z;
-        z = w3 | w5;
-    end
+
 end
-
 
 endmodule
