@@ -1,0 +1,4 @@
+Verilog/asic/*
+Verilog/fpga/*
+
+*.sv~
