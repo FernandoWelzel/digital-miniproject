@@ -1,3 +1,5 @@
+TP_PATH = "$PWD"
+
 vdel -lib  ${TP_PATH}/libs/lib_BENCH -all
 
 vlib ${TP_PATH}/libs/lib_BENCH

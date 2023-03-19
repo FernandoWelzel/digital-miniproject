@@ -6,11 +6,11 @@
 module join_param #(
     parameter               size = 2     // Size - Number of inputs
     )(
-    input  logic             req_out,    // Main request
-    output logic             ack_out,    // Main acknowledge
+    output logic             req_out,    // Main request
+    input  logic             ack_out,    // Main acknowledge
 
-    output logic   [size-1:0] req_in,    // Request input vector
-    input  logic   [size-1:0] ack_in,    // Acknowledge input vector
+    input  logic   [size-1:0] req_in,    // Request input vector
+    output logic   [size-1:0] ack_in,    // Acknowledge input vector
 
     input  logic                 rst     // Circuit asyncronous reset -> request = 0
 );
