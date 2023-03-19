@@ -4,12 +4,12 @@
 //  Description : Parametric register - Data change on posedge clock
 //==============================================================================
 module register #(
-    parameter integer        size = 2  // Size - Number of inputs and outputs
+    parameter integer        size = 1  // Size - Number of inputs and outputs
     )(
     input  logic [size-1:0]  data_in, // Input vector 
     output logic [size-1:0] data_out, // Output vector
 
-    input  logic                 clk, // Control signal - Clock
+    input  logic                ctrl, // Control signal - Clock
 
     input  logic                 rst  // Circuit asyncronous reset -> data_out = {0} 
 );
@@ -19,7 +19,7 @@ always_ff @(posedge rst) begin
     data_out <= {size{1'b0}};
 end
 
-always_ff @(posedge clk) begin
+always_ff @(posedge ctrl) begin
     data_out <= data_in;
 end
 
