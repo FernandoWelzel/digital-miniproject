@@ -46,10 +46,27 @@ initial  forever
         #10 rst = 1;
         #10 rst = 0;
 
-        // Stimulus
+        // Request 1
 	    #10 data_in = 1;
         #10 req_in = 1;
         #10 req_in = 0; ack_out = 1;
+        #10 ack_out = 0;
+        #50;
+
+        // Request 2
+	    #10 data_in = 1;
+        #10 req_in = 1;
+        #10 req_in = 0; 
+        #10 ack_out = 1;
+        #10 data_in = 0; ack_out = 0;
+        #50;
+
+        // Request 3
+	    #10 data_in = 1;
+        #10 req_in = 1;
+        #10 req_in = 0; 
+        #10 ack_out = 1;
+        #10 data_in = 0; ack_out = 0;
         #50;
 
         // Stop simulation
