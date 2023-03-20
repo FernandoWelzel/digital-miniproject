@@ -11,19 +11,18 @@ timeprecision 1ns;
 bit rst;        
 logic       req_out;
 logic       ack_out; //input
-logic       [size-1:0] req_in; //input
-logic       [size-1:0] ack_in;
+logic       [1:0] req_in; //input
+logic       [1:0] ack_in;
 
 
-// Controller
-//inputs
-Join_param#( .size(2)) J_p (
+// Join
+join_param #( .size(2) ) J_p (
   .req_out    ( req_out ),   
   .ack_out    ( ack_out ), 
-  .req_in     (req_in),
-  .ack_in     (ack_in),  
+  .req_in     ( req_in  ),
+  .ack_in     ( ack_in  ),  
   .rst        ( rst     )    // Reset
-)
+);
 
 // Monitor Results format
 initial $timeformat ( -9, 1, " ns", 12 );

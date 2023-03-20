@@ -11,21 +11,20 @@ timeprecision 1ns;
 logic       req_in; //input
 logic       ack_in; //output
 
-logic       [size-1:0] req_out; //output
-logic       [size-1:0] ack_out; //input
+logic       [1:0] req_out; //output
+logic       [1:0] ack_out; //input
 
 bit rst;  
 
 
-// Controller
-//inputs
-fork_param#( .size(2)) F_p (
+// Fork
+fork_param #( .size(2)) F_p (
   .req_out    ( req_out ),   
   .ack_out    ( ack_out ), 
-  .req_in     (req_in),
-  .ack_in     (ack_in),  
+  .req_in     ( req_in  ),
+  .ack_in     ( ack_in  ),  
   .rst        ( rst     )    // Reset
-)
+);
 
 // Monitor Results format
 initial $timeformat ( -9, 1, " ns", 12 );
