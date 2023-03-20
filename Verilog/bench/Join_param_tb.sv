@@ -10,8 +10,8 @@ timeprecision 1ns;
 
 bit rst;        
 logic       req_out;
-logic       ack_out;
-logic       [size-1:0] req_in;
+logic       ack_out; //input
+logic       [size-1:0] req_in; //input
 logic       [size-1:0] ack_in;
 
 
@@ -39,17 +39,13 @@ initial  forever
         #10 rst = 0;
 
         // Stimulus
+        #10 ack_out = 1;
 	    #10 req_in = 2'b00;
         #10 req_in = 2'b01;
         #10 req_in = 2'b10;
         #10 req_in = 2'b11;
         #10 req_in = 2'b00; //Ack_out = 1 we test if req_out stays at 1
-        #10 ack_in = 2'b01;
-        #10 ack_in = 2'b10;
-        #10 ack_in = 2'b00;
-        #10 ack_in = 2'b11; //We test if req_out stays at memory until ack_in and req_in are the same
-        #10 req_in = 2'b11; // We test this on a rising bit
-
+        #10 ack_out = 0;
 
         // Reset
 	#10 rst = 1;
