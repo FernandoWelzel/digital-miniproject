@@ -20,14 +20,14 @@ logic       ctrl_out;
 
 ctrl ctrl_b (
 //inputs
-  .ack_out    ( ack_out ),   
-  .req_in     ( req_in ),   
-  .rst          ( rst     ),    // Reset
+  .ack_out     ( ack_out ),   
+  .req_in      ( req_in ),   
+  .rst         ( rst     ),    // Reset
 
 //outputs
   .req_out    (req_out),
   .ack_in     (ack_in),
-  .ctrl_out  (ctrl_out)
+  .ctrl_out   (ctrl_out)
 );
 
 // Monitor Results format
@@ -44,11 +44,10 @@ initial  forever
         #10 rst = 0;
 
         // Stimulus
-	    #10 data_in = 2'b00;
-        #10 data_in = 2'b01;
-        #10 data_in = 2'b10;
-        #10 data_in = 2'b11;
-        #10;
+        #10 req_in = 1;
+	    #10 ack_out = 0;
+        #10 ack_out = 1; // ctrl_out should remains the same
+        #10 req_in = 0; // ctrl_out should be LOW
 
         // Reset
 	    #10 rst = 1;

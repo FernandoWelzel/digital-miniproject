@@ -40,17 +40,18 @@ initial  forever
         ack_out = 1; // should be copying the input
 
         // Reset
-        #10 rst = 1; // nothing should happen
-        #10 rst = 0;
+        #10 rst = 1;
 
         // Stimulus
-	    #10 data_in = 2'b00;
-        #10 rst = 1; // req_out should be high
-        #10 data_in = 2'b01;
-        #10 data_in = 2'b10;
+        #10 req_in = 1; // change on the ctrl_out
+        #10 ack_out = 0; // nothing shoul happen]
+        #10 req_in = 0; // change on the ctrl_out
+
+        // same test to watch the behavior with opposite reset
         #10 rst = 0;
-        #10 data_in = 2'b11;
-        #10;
+        #10 req_in = 1;
+        #10 ack_out = 0;
+        #10 req_in = 0;
 
         // Reset
 	    #10 rst = 1;
