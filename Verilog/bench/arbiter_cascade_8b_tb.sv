@@ -54,8 +54,10 @@ initial  forever
 
         // Stimulus - Random requests
 	    repeat (100) begin
-            req_in = $urandom;  // Generates random requests that arive at the same time 
-            #100;               // Time for all requests to be processed
+            req_in = $urandom;  // Generates random requests that arive at the same time
+            #10                 // Requests get partial processed after that
+            req_in = req_in | $urandom; // Adding requests to the pile 
+            #90;                        // Time for all requests to be processed
         end
     end                                                                        
 
