@@ -1,9 +1,9 @@
 //==============================================================================
 //  Filename    : arbiter_2b.sv                                              
 //  Designer    : Fernando WELZEL
-//  Description : Testbench for 2 bit selection arbiter
+//  Description : Testbench for 2 bit selection arbiter - REV3
 //==============================================================================
-module arbiter_2b_bench ();
+module arbiter_2b_rev3_bench ();
 
 timeunit      1ns;
 timeprecision 1ns;
@@ -17,7 +17,7 @@ logic          sel;
 logic          rst;
 
 // Arbiter instantiation
-arbiter_2b arbiter_2b_1 (
+arbiter_2b_rev3 arbiter_2b_1 (
   .req_in      ( req_in  ),  // Request vector from previous block
   .ack_in      ( ack_in  ),  // Acknoledge vector to previous block
   .req_out   (  req_out  ),  // Request given to next block
@@ -35,13 +35,13 @@ initial  forever
         // Initializing values
         req_in  = 2'b00;
         ack_out = 1'b0;
-
-        // Reseting system
+        
+        // Reseting
         #10 rst = 1;
         #10 rst = 0;
-
+        
         // Stimulus - Request to next block
-	    #10 req_in  = 2'b11; // Both requests arive at the same time
+	      #10 req_in  = 2'b11; // Both requests arive at the same time
         #10 ack_out = 1'b1;  // After one request is selected - Send acknoledge
         #10
         
