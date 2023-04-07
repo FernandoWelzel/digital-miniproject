@@ -34,13 +34,14 @@ initial  forever
     begin
         rst = 0;
         req_in = 0;
+        ack_out = 2'b00;
 
         // Reset
         #10 rst = 1;
         #10 rst = 0;
 
         // Stimulus
-	    #10 req_in = 0;
+	      #10 req_in = 0;
         #10 req_in = 1;
         #10 ack_out = 2'b00;
         #10 ack_out = 2'b01;
