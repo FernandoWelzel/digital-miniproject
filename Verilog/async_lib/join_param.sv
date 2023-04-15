@@ -16,7 +16,7 @@ module join_param #(
 );
 
 // Instantiation of Muller Gate ================================================
-muller #(.size(size)) muller_join (.data_in(req_in), .data_out(req_out), .rst (rst));
+muller_synt #(.size(size)) muller_join (.data_in(req_in), .data_out(req_out), .rst (rst));
 
 // == Main Code ================================================================
 assign ack_in = {size{ack_out}}; // Repeat operator - Connects all input vector to ack_out

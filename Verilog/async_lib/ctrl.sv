@@ -9,7 +9,8 @@ module ctrl (
     input  logic   req_in, // Request from previous control block 
 
     output logic  req_out, // Request to next control block 
-    output logic   ack_in, // Acknowledge to previous control block 
+    output logic   ack_in, // Acknowledge to previous control block
+     
     output logic ctrl_out, // Control signal to register 
 
     input  logic      rst  // Circuit asyncronous reset -> req_out = 0 
@@ -20,7 +21,7 @@ logic [1:0] muller_in;
 logic       muller_out;
 
 // Instantiation of MullerGate =================================================
-muller #(.size(2)) muller_ctrl (.data_in (muller_in), .data_out(muller_out), .rst (rst));
+muller_synt muller_ctrl (.data_in(muller_in), .data_out(muller_out), .rst (rst));
 
 // == Main Code ================================================================
 assign muller_in = {req_in, ~ack_out};                 // Concatenates the inputs into vector to muller gate

@@ -21,7 +21,7 @@ logic [1:0] muller_in;
 logic       muller_out;
 
 // Instantiation of MullerGate =================================================
-muller_rst_on #(.size(2)) muller_ctrl_rst_on (.data_in (muller_in), .data_out(muller_out), .rst (rst));
+muller_synt #(.rst_set(1)) muller_ctrl_rst_on (.data_in (muller_in), .data_out(muller_out), .rst (rst));
 
 // == Main Code ================================================================
 assign muller_in = {req_in, ~ack_out};                 // Concatenates the inputs into vector to muller gate

@@ -16,7 +16,7 @@ module fork_param #(
 );
 
 // Instantiation of Muller Gate ================================================
-muller #(.size(size)) muller_fork (.data_in(ack_out), .data_out(ack_in), .rst (rst));
+muller_synt #(.size(size)) muller_fork (.data_in(ack_out), .data_out(ack_in), .rst (rst));
 
 // == Main Code ================================================================
 assign req_out = {size{req_in}}; // Repeat operator - Connects all output vector to req_in

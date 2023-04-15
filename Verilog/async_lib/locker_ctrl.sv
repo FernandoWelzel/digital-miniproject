@@ -22,7 +22,7 @@ logic       muller_out;
 
 
 // Instantiation of MullerGate =================================================
-muller #(.size(2)) locker_ctrl (.data_in (muller_in), .data_out(muller_out), .rst (rst));
+muller_synt locker_ctrl (.data_in (muller_in), .data_out(muller_out), .rst (rst));
 
 // == Main Code ================================================================
 

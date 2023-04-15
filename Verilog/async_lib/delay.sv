@@ -3,7 +3,7 @@
 //  Designer    : Fernando WELZEL
 //  Description : Parametrizable delay for whatever number of inputs
 //==============================================================================
-module delay_1b # (
+module delay # (
   parameter integer delay = 1, // Delay set by block
   parameter integer  size = 1  // Size of input and output 
 )(
@@ -12,7 +12,8 @@ module delay_1b # (
 );
 
 // == Set time format =========================================================
-initial $timeformat ( -9, 1, " ns", 12 );
+timeunit      1ns;
+timeprecision 1ns;
 
 // == Instantiation with generate =============================================
 generate

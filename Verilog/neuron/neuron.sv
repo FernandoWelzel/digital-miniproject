@@ -24,6 +24,7 @@ module neuron #(
   input  logic                     rst  // Circuit asyncronous reset -> req_out = 0 
 );
 
+// == Setting time ===========================================================
 timeunit      1ns;
 timeprecision 1ns;
 

@@ -11,7 +11,8 @@ module delay_1b # (
 );
 
 // == Set time format =========================================================
-initial $timeformat ( -9, 1, " ns", 12 );
+timeunit      1ns;
+timeprecision 1ns;
 
 // == Behavioral synthesis ====================================================
 always @* begin

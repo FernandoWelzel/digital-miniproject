@@ -13,7 +13,7 @@ logic [1:0] data_in;
 logic       data_out;
 
 // Muller gate
-muller_rst_on #( .size(2) ) muller_rst_on_1 (
+muller_synt #( .rst_set(1) ) muller_rst_on_1 (
   .data_in      ( data_in  ),   // Data input bus
   .data_out     ( data_out ),   // Data output value
   .rst          ( rst      )    // Reset
