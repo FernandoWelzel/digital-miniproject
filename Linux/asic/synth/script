@@ -1,0 +1,50 @@
+# Setting up for Synthesis
+
+set link_force_case  "check_reference"
+set link_library  {c35_CORELIB_TYP.db }
+set physical_library ""
+
+set search_path [list . ${synopsys_root}/libraries/syn ${synopsys_root}/dw/sim_ver /softslin/AMS_410_ISR15/synopsys/c35_3.3V]
+set target_library c35_CORELIB_TYP.db
+set synthetic_library  ""
+set command_log_file  "./command.log"
+set designer  ""
+set company  ""
+set find_converts_name_lists  "false"
+set hdlin_work_directory {core} 
+define_design_lib CORE -path ./core
+set symbol_library  c35_CORELIB_TYP.sdb
+
+set test_default_period {100}
+set test_default_delay {0}
+set test_default_bidir_delay {0}
+set test_default_strobe {40}
+set test_stil_netlist_format {verilog}
+
+set hdlin_enable_rtldrc_info {true}
+
+set write_name_nets_same_as_ports {true}
+set write_name_nets_same_as_ports {true}
+set verilogout_no_tri {true}
+set bus_inference_style {%s[%d]}
+set bus_inference_style {%s[%d]}
+
+# Synthesising
+
+analyze -library WORK -format sverilog {/tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network_synth.sv}
+
+elaborate network_synth -architecture verilog -library DEFAULT
+
+set_disable_timing full_network/layer*/*neuron*/*ctrl*/ctrl*/ack_in
+set_disable_timing full_network/layer*/*neuron*/*ctrl*/ctrl*/muller_ctrl*/*muller*/*IMAJ*/C
+set_disable_timing full_network/layer*/*neuron*/*ctrl*/*fork*/*muller*/*muller*/*IMAJ*/C
+set_disable_timing full_network/layer*/*neuron*/*ctrl*/*join*/*muller*/*muller*/*IMAJ*/C
+
+set_disable_timing full_network/layer*/arbiter*/*arbiter*/ack_in
+set_disable_timing full_network/layer*/arbiter*/*arbiter*/ack_out
+set_disable_timing full_network/layer*/arbiter*/*arbiter*/u5/*muller*/*IMAJ*/C
+set_disable_timing full_network/layer*/arbiter*/*arbiter*/u6/*muller*/*IMAJ*/C
+
+set_disable_timing full_network/layer*/*fork*/*muller*/*muller*/IMAJ*/C
+
+# set_dont_touch "ctrl ctrl_rst_on arbiter_2b_rev3 muller_synt delay"

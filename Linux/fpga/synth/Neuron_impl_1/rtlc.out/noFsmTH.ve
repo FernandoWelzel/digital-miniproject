@@ -1,0 +1,3 @@
+ctrl rtlc_no_parameters
+muller size=:2: 
+register size=:4: 

@@ -1,0 +1,190 @@
+\o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 06/02/2021 23:23 (sjfdcl1073) $
+\o Sub version:		sub-version  s195 
+\o Arguments:		-mpssession virtuoso6706 -mpshost cimeld27.cime.inpg.fr 
+\o Working Directory:	cimeld27.cime.inpg.fr:/tp/xph2sei/xph2sei403/MiniProjet/asic/synth
+\o 64-bit offsets
+\o Qt version: 		5.9.1
+\o Log file is "/tp/xph2sei/xph2sei403/MiniProjet/asic/synth/libManager.log".
+\o Opening libManager window.
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(0 28 602 491))
+\o changeWorkingDir("/tp/xph2sei/xph2sei403/MiniProjet/asic/synth") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o MPS service: map window
+\o Library Manager customization server connected.
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(0 28 1920 977))
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a cdsLibManager->cellListBox->value = "XNR41"
+\a cdsLibManager->cellLineEdit->value = "XNR41"
+\a cdsLibManager->libListBox->value = "CORELIBD"
+\a cdsLibManager->libLineEdit->value = "CORELIBD"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "HAX1"
+\a cdsLibManager->cellLineEdit->value = "HAX1"
+\a lmgrLogShowPopup("mainListPopup1" 18 58 2 "HAX1")
+\a cdsLibManager->editPropertiesButton->value = t
+\o MPS request: edit property
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "CORELIB_V5"
+\a cdsLibManager->libLineEdit->value = "CORELIB_V5"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libListBox->value = "ESDLIB"
+\a cdsLibManager->libLineEdit->value = "ESDLIB"
+\a cdsLibManager->libListBox->value = "A_CELLS"
+\a cdsLibManager->libLineEdit->value = "A_CELLS"
+\a cdsLibManager->libListBox->value = "ESDLIB"
+\a cdsLibManager->libLineEdit->value = "ESDLIB"
+\a cdsLibManager->libListBox->value = "GATES"
+\a cdsLibManager->libLineEdit->value = "GATES"
+\a cdsLibManager->libListBox->value = "IOLIBV5_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIBV5_4M"
+\a cdsLibManager->libListBox->value = "PRIMLIB"
+\a cdsLibManager->libLineEdit->value = "PRIMLIB"
+\a cdsLibManager->libListBox->value = "BORDERS"
+\a cdsLibManager->libLineEdit->value = "BORDERS"
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a cdsLibManager->libListBox->value = "PACKAGES"
+\a cdsLibManager->libLineEdit->value = "PACKAGES"
+\a cdsLibManager->libListBox->value = "CORELIBD"
+\a cdsLibManager->libLineEdit->value = "CORELIBD"
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\o Cell filter set to "m"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a _lmSetFilter( 'cell "m")
+\o Cell filter set to ""
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a _lmSetFilter( 'cell "")
+\o Cell filter set to "M"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a _lmSetFilter( 'cell "M")
+\o Cell filter set to ""
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a _lmSetFilter( 'cell "")
+\a cdsLibManager->cellComboFilter->value = ""
+\a cdsLibManager->cellSearchOptionsButton->value = t
+\a cdsLibManager->cellLineEdit->value = "M"
+\a cdsLibManager->cellListBox->value = "MAJ31"
+\a cdsLibManager->cellLineEdit->value = "MAJ31"
+\a cdsLibManager->cellListBox->value = "LOGIC0"
+\a cdsLibManager->cellLineEdit->value = "LOGIC0"
+\a cdsLibManager->libListBox->value = "CORELIBD"
+\a cdsLibManager->libLineEdit->value = "CORELIBD"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "LOGIC0"
+\a cdsLibManager->cellLineEdit->value = "LOGIC0"
+\a cdsLibManager->cellListBox->value = "MAJ3X1"
+\a cdsLibManager->cellLineEdit->value = "MAJ3X1"
+\a cdsLibManager->libListBox->value = "CORELIB_V5"
+\a cdsLibManager->libLineEdit->value = "CORELIB_V5"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libListBox->value = "ESDLIB"
+\a cdsLibManager->libLineEdit->value = "ESDLIB"
+\a cdsLibManager->libListBox->value = "GATES"
+\a cdsLibManager->libLineEdit->value = "GATES"
+\a cdsLibManager->libListBox->value = "IOLIBV5_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIBV5_4M"
+\a cdsLibManager->libListBox->value = "LEADFRAMES"
+\a cdsLibManager->libLineEdit->value = "LEADFRAMES"
+\a cdsLibManager->libListBox->value = "BORDERS"
+\a cdsLibManager->libLineEdit->value = "BORDERS"
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libListBox->value = "A_CELLS"
+\a cdsLibManager->libLineEdit->value = "A_CELLS"
+\a cdsLibManager->libListBox->value = "BORDERS"
+\a cdsLibManager->libLineEdit->value = "BORDERS"
+\a cdsLibManager->libListBox->value = "CORELIB"
+\a cdsLibManager->libLineEdit->value = "CORELIB"
+\a cdsLibManager->libListBox->value = "CORELIBD"
+\a cdsLibManager->libLineEdit->value = "CORELIBD"
+\a cdsLibManager->libListBox->value = "CORELIB_V5"
+\a cdsLibManager->libLineEdit->value = "CORELIB_V5"
+\a cdsLibManager->libListBox->value = "ESDLIB"
+\a cdsLibManager->libLineEdit->value = "ESDLIB"
+\a cdsLibManager->libListBox->value = "GATES"
+\a cdsLibManager->libLineEdit->value = "GATES"
+\a cdsLibManager->libListBox->value = "IOLIBV5_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIBV5_4M"
+\a cdsLibManager->libListBox->value = "IOLIB_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIB_4M"
+\a cdsLibManager->libListBox->value = "PRIMLIB"
+\a cdsLibManager->libLineEdit->value = "PRIMLIB"
+\a cdsLibManager->libListBox->value = "PRIMLIBRF"
+\a cdsLibManager->libLineEdit->value = "PRIMLIBRF"
+\a cdsLibManager->libListBox->value = "SFCLIB_C35B4C0"
+\a cdsLibManager->libLineEdit->value = "SFCLIB_C35B4C0"
+\a cdsLibManager->libListBox->value = "SPIRALSD_4M"
+\a cdsLibManager->libLineEdit->value = "SPIRALSD_4M"
+\a cdsLibManager->libListBox->value = "SPIRALS_4M"
+\a cdsLibManager->libLineEdit->value = "SPIRALS_4M"
+\a cdsLibManager->libListBox->value = "TECH_C35B3"
+\a cdsLibManager->libLineEdit->value = "TECH_C35B3"
+\a cdsLibManager->libListBox->value = "TECH_C35B4"
+\a cdsLibManager->libLineEdit->value = "TECH_C35B4"
+\a cdsLibManager->libListBox->value = "TECH_C35B3"
+\a cdsLibManager->libLineEdit->value = "TECH_C35B3"
+\a cdsLibManager->libListBox->value = "SPIRALS_4M"
+\a cdsLibManager->libLineEdit->value = "SPIRALS_4M"
+\a cdsLibManager->libListBox->value = "SPIRALSD_4M"
+\a cdsLibManager->libLineEdit->value = "SPIRALSD_4M"
+\a cdsLibManager->libListBox->value = "SFCLIB_C35B4C0"
+\a cdsLibManager->libLineEdit->value = "SFCLIB_C35B4C0"
+\a cdsLibManager->libListBox->value = "PRIMLIBRF"
+\a cdsLibManager->libLineEdit->value = "PRIMLIBRF"
+\a cdsLibManager->libListBox->value = "PRIMLIB"
+\a cdsLibManager->libLineEdit->value = "PRIMLIB"
+\a cdsLibManager->libListBox->value = "PACKAGES"
+\a cdsLibManager->libLineEdit->value = "PACKAGES"
+\a cdsLibManager->libListBox->value = "IOLIB_ANA_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIB_ANA_4M"
+\a cdsLibManager->libListBox->value = "IOLIB_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIB_4M"
+\a cdsLibManager->libListBox->value = "IOLIBV5_4M"
+\a cdsLibManager->libLineEdit->value = "IOLIBV5_4M"
+\a cdsLibManager->libListBox->value = "ESDLIB"
+\a cdsLibManager->libLineEdit->value = "ESDLIB"
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libListBox->value = "CORELIB_V5"
+\a cdsLibManager->libLineEdit->value = "CORELIB_V5"
+\a cdsLibManager->libListBox->value = "CORELIBD"
+\a cdsLibManager->libLineEdit->value = "CORELIBD"
+\a cdsLibManager->cellListBox->value = "IMAJ3X1"
+\a cdsLibManager->cellLineEdit->value = "IMAJ3X1"
+\a cdsLibManager->cellListBox->value = "HAX6"
+\a cdsLibManager->cellLineEdit->value = "HAX6"
+\a cdsLibManager->cellListBox->value = "FILLCELLX32"
+\a cdsLibManager->cellLineEdit->value = "FILLCELLX32"
+\a cdsLibManager->cellListBox->value = "HAX1"
+\a cdsLibManager->cellLineEdit->value = "HAX1"
+\a cdsLibManager->cellListBox->value = "FILLCELLX1"
+\a cdsLibManager->cellLineEdit->value = "FILLCELLX1"
+\a cdsLibManager->cellListBox->value = "HAX1"
+\a cdsLibManager->cellLineEdit->value = "HAX1"
+\a cdsLibManager->cellListBox->value = "LOGIC0"
+\a cdsLibManager->cellLineEdit->value = "LOGIC0"
+\a lmgrLogShowPopup("mainListPopup1" 34 163 2 "LOGIC0")
+\o MPS service: shutdown
+\o libManager is exiting.
+\a exit(0)

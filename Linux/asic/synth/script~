@@ -1,0 +1,18 @@
+analyze -library WORK -format sverilog {/tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv}
+
+set_dont_touch "ctrl ctrl_rst_on arbiter_2b_rev3 muller_synt_2b muller_synt delay"
+
+elaborate network -architecture verilog -library DEFAULT
+
+set_disable_timing layer*/*neuron*/*ctrl*/ctrl*/ack_in
+set_disable_timing layer*/*neuron*/*ctrl*/ctrl*/muller_ctrl*/*muller*/IMAJ30*/C
+set_disable_timing layer*/*neuron*/*ctrl*/*fork*/*muller*/*muller*/IMAJ*/C
+set_disable_timing layer*/*neuron*/*ctrl*/*join*/*muller*/*muller*/IMAJ*/C
+
+set_disable_timing layer*/arbiter*/*arbiter*/ack_in
+set_disable_timing layer*/arbiter*/*arbiter*/ack_out
+set_disable_timing layer*/arbiter*/*arbiter*/u5/*muller*/IMAJ*/C
+set_disable_timing layer*/arbiter*/*arbiter*/u6/*muller*/IMAJ*/C
+
+set_disable_timing layer*/*fork*/*muller*/*muller*/IMAJ*/C
+

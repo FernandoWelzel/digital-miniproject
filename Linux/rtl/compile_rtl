@@ -1,0 +1,56 @@
+# Script to compile all synthesis files
+# Fernando WELZEL
+
+# Compile ASYNC library
+vdel -lib  ${TP_PATH}/libs/lib_ASYNC -all
+
+vlib ${TP_PATH}/libs/lib_ASYNC
+
+vmap lib_ASYNC ${TP_PATH}/libs/lib_ASYNC
+
+vlog +acc -work lib_ASYNC ${TP_PATH}/rtl/async_lib/*.sv
+
+# Compile SYNC library
+vdel -lib  ${TP_PATH}/libs/lib_SYNC -all
+
+vlib ${TP_PATH}/libs/lib_SYNC
+
+vmap lib_SYNC ${TP_PATH}/libs/lib_SYNC
+
+vlog +acc -work lib_SYNC ${TP_PATH}/rtl/sync_lib/*.sv
+
+# Compile NEURON library
+vdel -lib  ${TP_PATH}/libs/lib_NEURON -all
+
+vlib ${TP_PATH}/libs/lib_NEURON
+
+vmap lib_NEURON ${TP_PATH}/libs/lib_NEURON
+
+vlog +acc -work lib_NEURON ${TP_PATH}/rtl/neuron/*.sv
+
+# Compile NETWORK library
+vdel -lib  ${TP_PATH}/libs/lib_NETWORK -all
+
+vlib ${TP_PATH}/libs/lib_NETWORK
+
+vmap lib_NETWORK ${TP_PATH}/libs/lib_NETWORK
+
+vlog +acc -work lib_NETWORK ${TP_PATH}/rtl/network/weights.sv
+vlog +acc -work lib_NETWORK ${TP_PATH}/rtl/network/thresholds.sv
+
+if [ 0 = 1 ]; then
+   vlog +acc -work lib_NETWORK ${TP_PATH}/rtl/network/*.sv
+else
+   vlog +acc -work lib_NETWORK ${TP_PATH}/rtl/network/network_netlist.v
+fi
+
+# If in windows: Compile corelib
+if [[ "$OSTYPE" != "linux-gnu"* ]]; then
+    vdel -lib  ${TP_PATH}/libs/corelib -all
+
+    vlib ${TP_PATH}/libs/corelib
+
+    vmap corelib ${TP_PATH}/libs/corelib
+
+    vlog +acc -work corelib ${TP_PATH}/rtl/corelib/*.sv
+fi

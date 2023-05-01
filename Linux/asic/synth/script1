@@ -1,0 +1,12 @@
+set_disable_timing layer*/*neuron*/*ctrl*/ctrl*/ack_in
+set_disable_timing layer*/*neuron*/*ctrl*/ctrl*/muller_ctrl*/*muller*/IMAJ30*/C
+set_disable_timing layer*/*neuron*/*ctrl*/*fork*/*muller*/*muller*/IMAJ*/C
+set_disable_timing layer*/*neuron*/*ctrl*/*join*/*muller*/*muller*/IMAJ*/C
+
+set_disable_timing layer*/arbiter*/*arbiter*/ack_in
+set_disable_timing layer*/arbiter*/*arbiter*/ack_out
+set_disable_timing layer*/arbiter*/*arbiter*/u5/*muller*/IMAJ*/C
+set_disable_timing layer*/arbiter*/*arbiter*/u6/*muller*/IMAJ*/C
+
+set_disable_timing layer*/*fork*/*muller*/*muller*/IMAJ*/C
+

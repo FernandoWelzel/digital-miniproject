@@ -1,0 +1,30 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+Options:	-execute Script_ASIC_Innovus 
+Date:		Wed Apr 26 19:21:52 2023
+Host:		cimeld29.cime.inpg.fr (x86_64 w/Linux 3.10.0-1160.76.1.el7.x86_64) (8cores*16cpus*Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz 16384KB)
+OS:		Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+Executing cmd 'Script_ASIC_Innovus' ...
+**ERROR: (IMPSYT-7114):	Invalid return code while executing command 'Script_ASIC_Innovus'. Review the following error in command 'Script_ASIC_Innovus' then restart.
+**ERROR: (IMPSYT-6693):	Error message: Script_ASIC_Innovus: invalid command name "Script_ASIC_Innovus".
+<CMD> win
+
+*** Memory Usage v#1 (Current mem = 482.203M, initial mem = 187.660M) ***
+*** Message Summary: 0 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:11.9, real=0:00:59.0, mem=482.2M) ---

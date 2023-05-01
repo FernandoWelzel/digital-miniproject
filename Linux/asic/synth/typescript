@@ -1,0 +1,858 @@
+Script started on Wed Apr 26 16:07:23 2023
+]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synth[?1034hxph2sei403@cimeld27:~/MiniProjet/asic/synth$ cd ..[Kcd ..[Kls
+ARBITER_2B_REV3.mr  MULLER_SYNT.mr       Schematic_layer2.pdf         ctrl-verilog.syn         fork_param-verilog.pvl     muller_synt_2b-verilog.pvl  neuron_ctrl-verilog.pvl  script1
+ARBITER_CASCADE.mr  MULLER_SYNT_2B.mr    arbiter_2b_rev3-verilog.pvl  ctrl_rst_on-verilog.pvl  fork_param-verilog.syn     muller_synt_2b-verilog.syn  neuron_ctrl-verilog.syn  script~
+CTRL.mr             MUTEX.mr             arbiter_2b_rev3-verilog.syn  ctrl_rst_on-verilog.syn  join_param-verilog.pvl     mutex-verilog.pvl           neuron_data-verilog.pvl  synth_try.ddc
+CTRL_RST_ON.mr      MUX.mr               arbiter_cascade-verilog.pvl  default.svf              join_param-verilog.syn     mutex-verilog.syn           neuron_data-verilog.syn  thresholds_pkg.pvk
+DELAY.mr            NETWORK.mr           arbiter_cascade-verilog.syn  delay-verilog.pvl        layer-verilog.pvl          mux-verilog.pvl             neuron_synth.v           transcript
+DELAY_1B.mr         NEURON.mr            [0m[01;32massura_tech.lib[0m              delay-verilog.syn        layer-verilog.syn          mux-verilog.syn             [01;32mpvtech.lib[0m               typescript
+DEMUX.mr            NEURON_CTRL.mr       calview.cellmap              delay_1b-verilog.pvl     libManager.log             network-verilog.pvl         register-verilog.pvl     virtuoso6.BatchTriggers.RunLVS
+FORK_PARAM.mr       NEURON_DATA.mr       cds.lib                      delay_1b-verilog.syn     muller_rst_on-verilog.pvl  network-verilog.syn         register-verilog.syn     vsim.wlf
+JOIN_PARAM.mr       REGISTER.mr          [01;32mcds.lib.save[0m                 demux-verilog.pvl        muller_rst_on-verilog.syn  network_synth.v             rom_layer-verilog.pvl    weights_pkg.pvk
+LAYER.mr            ROM_LAYER.mr         command.log                  demux-verilog.syn        muller_synt-verilog.pvl    neuron-verilog.pvl          rom_layer-verilog.syn    [01;34mwork[0m
+MULLER_RST_ON.mr    Schematic_layer.pdf  ctrl-verilog.pvl             filenames.log            muller_synt-verilog.syn    neuron-verilog.syn          script
+]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ cleq ar
+[3;J[H[2J]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ clear[3Plscd ..bash ./compile[9Pcd ..[3Plsclear[Kclear[3Plscd ..bash ./compile[5P./compile[4Pclearsource config/config_ASICclear[K./compile[5@bash ./compile[9Pcd ..[3Plsclear[K; ; .: /script
+bash: ./script: Permission denied
+]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ ./script[3Pclear[3Plscd ..bash ./compile[5P./compile[4Pclear./compile[5@bash ./compile[9Pcd ..[3Plsclear./script[K./script[3Pclear[3Plscd ..bash ./compile[5P./compile[4Pclearsource config/config_ASICRTL [16P./compiledesign_vision -f script[10Pcd asic/synth[8Plearsource config/config_RTLclear[Ksource config/config_ASICcd ..[Klearcbgbgbgdesign_vision -f scriptclear[Kdesign_vision -f scriptclear[Kdesign_vision -f scriptclear[Kdesign_vision -f script
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+Initializing gui preferences from file  /tp/xph2sei/xph2sei403/.synopsys_dv_prefs.tcl
+analyze -library WORK -format sverilog {/tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv}
+Running PRESTO HDLC
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:15: The construct 'timeunit' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:16: The construct 'timeprecision' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: delay controls are ignored for synthesis. (VER-176)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: Nonblocking assignments and blocking delays in the same process; potential simulation or synthesis mismatch. (VER-140)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_ISR15/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+set_dont_touch "ctrl ctrl_rst_on arbiter_2b_rev3 muller_synt_2b muller_synt delay"
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'ctrl'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'ctrl_rst_on'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'arbiter_2b_rev3'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'muller_synt_2b'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'muller_synt'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'delay'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+elaborate network -architecture verilog -library DEFAULT
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/gtech.db'
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'network'.
+Information: Building the design 'layer' instantiated from design 'network' with
+	the parameters "w_size=8,neurons_in=4,neurons_out=8,rom_mem=256'h2612022c05312234382f2c190611321633020e06272d0013351e0c380b39ee12,thr_val=64'h3a393e3f3a3d393e". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'layer' instantiated from design 'network' with
+	the parameters "w_size=8,neurons_in=8,neurons_out=2,rom_mem=128'h5515170842cec80f081034341a64e921,thr_val=16'h7f7f". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_cascade' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "input_size=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "delay=10". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fork_param' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rom_layer' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "w_size=8,neurons_in=4,neurons_out=8,rom_mem=256'h2612022c05312234382f2c190611321633020e06272d0013351e0c380b39ee12". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv:31: signed to unsigned assignment occurs. (VER-318)
+Statistics for MUX_OPs
+=============================================================
+|  block name/line   | Inputs | Outputs | # sel inputs | MB |
+=============================================================
+| rom_layer_8_4_8/39 |   4    |   64    |      2       | N  |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3e,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h39,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3d,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3a,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3f,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_cascade' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "input_size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fork_param' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rom_layer' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "w_size=8,neurons_in=8,neurons_out=2,rom_mem=128'h5515170842cec80f081034341a64e921". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv:31: signed to unsigned assignment occurs. (VER-318)
+Statistics for MUX_OPs
+=============================================================
+|  block name/line   | Inputs | Outputs | # sel inputs | MB |
+=============================================================
+| rom_layer_8_8_2/39 |   8    |   16    |      3       | N  |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "thold=8'h7f,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_2b_rev3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay_1b' instantiated from design 'delay_delay10' with
+	the parameters "delay=10". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'fork_param_size8' with
+	the parameters "size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_ctrl' instantiated from design 'neuron_3e_8_0000000100000001' with
+	the parameters "delay_v=64'h0000000100000001". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3e_8_0000000100000001' with
+	the parameters "thold=63,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'delay'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_39_8_0000000100000001' with
+	the parameters "thold=58,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3d_8_0000000100000001' with
+	the parameters "thold=62,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3a_8_0000000100000001' with
+	the parameters "thold=59,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3f_8_0000000100000001' with
+	the parameters "thold=64,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'fork_param_size2' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_7f_8_0000000100000001' with
+	the parameters "thold=128,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'mutex'. (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv:15: Netlist for always_ff block does not contain a flip-flop. (ELAB-976)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt_2b' instantiated from design 'muller_synt_size8' with
+	the parameters "rst_set=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ctrl'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ctrl_rst_on'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'join_param' instantiated from design 'neuron_ctrl_0000000100000001' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay' instantiated from design 'neuron_ctrl_0000000100000001' with
+	the parameters "delay=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'register' instantiated from design 'neuron_data_thold63_data_bits8' with
+	the parameters "size=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_size8 line 18 in file
+		'/tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register'. (HDL-193)
+
+Inferred memory devices in process
+	in routine register line 18 in file
+		'/tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'neuron_data_thold63_data_bits8' with
+	the parameters "data_bits=8,sel_bits=1". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv:20: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'delay_1b' instantiated from design 'delay' with
+	the parameters "delay=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'ctrl_rst_on' with
+	the parameters "rst_set=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt_2b' instantiated from design 'muller_synt_rst_set1' with
+	the parameters "rst_set=1'h1". (HDL-193)
+Presto compilation completed successfully.
+1
+1
+design_vision> Current design is 'network'.
+Current design is 'network'.
+design_vision> Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/generic.sdb'
+design_vision> 
+Information: Interrupting current command. (INT-2)
+^CInformation: One more interrupt will exit process. (INT-3)
+^CInformation: Process terminated by interrupt. (INT-4)
+]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ design_vision -f script
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+Initializing gui preferences from file  /tp/xph2sei/xph2sei403/.synopsys_dv_prefs.tcl
+analyze -library WORK -format sverilog {/tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv}
+Running PRESTO HDLC
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:15: The construct 'timeunit' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:16: The construct 'timeprecision' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: delay controls are ignored for synthesis. (VER-176)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: Nonblocking assignments and blocking delays in the same process; potential simulation or synthesis mismatch. (VER-140)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_ISR15/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+#set_dont_touch "ctrl ctrl_rst_on arbiter_2b_rev3 muller_synt_2b muller_synt delay"
+#elaborate network -architecture verilog -library DEFAULT
+design_vision> design_vision> design_vision> 
+Information: Interrupting current command. (INT-2)
+^CInformation: One more interrupt will exit process. (INT-3)
+^CInformation: Process terminated by interrupt. (INT-4)
+]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ design_vision -f script[15P./script[15@design_vision -f script
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+Initializing gui preferences from file  /tp/xph2sei/xph2sei403/.synopsys_dv_prefs.tcl
+analyze -library WORK -format sverilog {/tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv}
+Running PRESTO HDLC
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:15: The construct 'timeunit' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:16: The construct 'timeprecision' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: delay controls are ignored for synthesis. (VER-176)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: Nonblocking assignments and blocking delays in the same process; potential simulation or synthesis mismatch. (VER-140)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_ISR15/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+set_dont_touch "ctrl ctrl_rst_on arbiter_2b_rev3 muller_synt_2b muller_synt delay"
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'ctrl'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'ctrl_rst_on'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'arbiter_2b_rev3'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'muller_synt_2b'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'muller_synt'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'delay'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+elaborate network -architecture verilog -library DEFAULT
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/gtech.db'
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'network'.
+Information: Building the design 'layer' instantiated from design 'network' with
+	the parameters "w_size=8,neurons_in=4,neurons_out=8,rom_mem=256'h2612022c05312234382f2c190611321633020e06272d0013351e0c380b39ee12,thr_val=64'h3a393e3f3a3d393e". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'layer' instantiated from design 'network' with
+	the parameters "w_size=8,neurons_in=8,neurons_out=2,rom_mem=128'h5515170842cec80f081034341a64e921,thr_val=16'h7f7f". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_cascade' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "input_size=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "delay=10". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fork_param' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rom_layer' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "w_size=8,neurons_in=4,neurons_out=8,rom_mem=256'h2612022c05312234382f2c190611321633020e06272d0013351e0c380b39ee12". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv:31: signed to unsigned assignment occurs. (VER-318)
+Statistics for MUX_OPs
+=============================================================
+|  block name/line   | Inputs | Outputs | # sel inputs | MB |
+=============================================================
+| rom_layer_8_4_8/39 |   4    |   64    |      2       | N  |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3e,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h39,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3d,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3a,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3f,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_cascade' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "input_size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fork_param' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rom_layer' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "w_size=8,neurons_in=8,neurons_out=2,rom_mem=128'h5515170842cec80f081034341a64e921". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv:31: signed to unsigned assignment occurs. (VER-318)
+Statistics for MUX_OPs
+=============================================================
+|  block name/line   | Inputs | Outputs | # sel inputs | MB |
+=============================================================
+| rom_layer_8_8_2/39 |   8    |   16    |      3       | N  |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "thold=8'h7f,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_2b_rev3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay_1b' instantiated from design 'delay_delay10' with
+	the parameters "delay=10". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'fork_param_size8' with
+	the parameters "size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_ctrl' instantiated from design 'neuron_3e_8_0000000100000001' with
+	the parameters "delay_v=64'h0000000100000001". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3e_8_0000000100000001' with
+	the parameters "thold=63,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'delay'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_39_8_0000000100000001' with
+	the parameters "thold=58,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3d_8_0000000100000001' with
+	the parameters "thold=62,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3a_8_0000000100000001' with
+	the parameters "thold=59,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3f_8_0000000100000001' with
+	the parameters "thold=64,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'fork_param_size2' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_7f_8_0000000100000001' with
+	the parameters "thold=128,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'mutex'. (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv:15: Netlist for always_ff block does not contain a flip-flop. (ELAB-976)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt_2b' instantiated from design 'muller_synt_size8' with
+	the parameters "rst_set=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ctrl'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ctrl_rst_on'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'join_param' instantiated from design 'neuron_ctrl_0000000100000001' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay' instantiated from design 'neuron_ctrl_0000000100000001' with
+	the parameters "delay=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'register' instantiated from design 'neuron_data_thold63_data_bits8' with
+	the parameters "size=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_size8 line 18 in file
+		'/tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register'. (HDL-193)
+
+Inferred memory devices in process
+	in routine register line 18 in file
+		'/tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux' instantiated from design 'neuron_data_thold63_data_bits8' with
+	the parameters "data_bits=8,sel_bits=1". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv:20: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'delay_1b' instantiated from design 'delay' with
+	the parameters "delay=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'ctrl_rst_on' with
+	the parameters "rst_set=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt_2b' instantiated from design 'muller_synt_rst_set1' with
+	the parameters "rst_set=1'h1". (HDL-193)
+Presto compilation completed successfully.
+1
+1
+design_vision> Current design is 'network'.
+Current design is 'network'.
+design_vision> write -hierarchy -format sverilog -output /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/network_netlist.sverilog
+Error: Unknown export format 'sverilog'. (EXPT-3)
+Error: Format 'sverilog' is not a valid write format. (UID-32)
+design_vision> write -hierarchy -format sverilog -output /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/network_netlist.sverilog
+Error: Unknown export format 'sverilog'. (EXPT-3)
+Error: Format 'sverilog' is not a valid write format. (UID-32)
+design_vision> Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/generic.sdb'
+write -hierarchy -format verilog -output /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/network_netlist.v
+Writing verilog file '/tp/xph2sei/xph2sei403/MiniProjet/asic/synth/network_netlist.v'.
+Warning: Module mutex contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Module rom_layer_8_4_8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module mux_data_bits8_sel_bits1 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module neuron_data_thold63_data_bits8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module neuron_data_thold58_data_bits8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module neuron_data_thold62_data_bits8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module neuron_data_thold59_data_bits8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module neuron_data_thold64_data_bits8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module rom_layer_8_8_2 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module neuron_data_thold128_data_bits8 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+design_vision> design_vision> 
+Information: Interrupting current command. (INT-2)
+^CInformation: One more interrupt will exit process. (INT-3)
+^CInformation: Process terminated by interrupt. (INT-4)
+]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ clear
+[3;J[H[2J]0;xph2sei403@cimeld27.cime.inpg.fr: ~/MiniProjet/asic/synthxph2sei403@cimeld27:~/MiniProjet/asic/synth$ cleardesign_vision -f script
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+Initializing gui preferences from file  /tp/xph2sei/xph2sei403/.synopsys_dv_prefs.tcl
+analyze -library WORK -format sverilog {/tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv}
+Running PRESTO HDLC
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:15: The construct 'timeunit' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:16: The construct 'timeprecision' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay.sv
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: delay controls are ignored for synthesis. (VER-176)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/delay_1b.sv:35: Nonblocking assignments and blocking delays in the same process; potential simulation or synthesis mismatch. (VER-140)
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt_2b.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/muller_synt.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/ctrl_rst_on.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/join_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/fork_param.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/register.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/mux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/sync_lib/demux.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_2b_rev3.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/arbiter_cascade.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_ctrl.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/layer.sv
+Compiling source file /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/network.sv
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_ISR15/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+# set_dont_touch "ctrl ctrl_rst_on arbiter_2b_rev3 muller_synt_2b muller_synt delay"
+elaborate network -architecture verilog -library DEFAULT
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/gtech.db'
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/standard.sldb'
+  Loading link library 'c35_CORELIB_TYP'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'network'.
+Information: Building the design 'layer' instantiated from design 'network' with
+	the parameters "w_size=8,neurons_in=4,neurons_out=8,rom_mem=256'h2612022c05312234382f2c190611321633020e06272d0013351e0c380b39ee12,thr_val=64'h3a393e3f3a3d393e". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'layer' instantiated from design 'network' with
+	the parameters "w_size=8,neurons_in=8,neurons_out=2,rom_mem=128'h5515170842cec80f081034341a64e921,thr_val=16'h7f7f". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_cascade' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "input_size=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "delay=10". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fork_param' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rom_layer' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "w_size=8,neurons_in=4,neurons_out=8,rom_mem=256'h2612022c05312234382f2c190611321633020e06272d0013351e0c380b39ee12". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv:31: signed to unsigned assignment occurs. (VER-318)
+Statistics for MUX_OPs
+=============================================================
+|  block name/line   | Inputs | Outputs | # sel inputs | MB |
+=============================================================
+| rom_layer_8_4_8/39 |   4    |   64    |      2       | N  |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3e,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h39,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3d,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3a,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_4_8_3a393e3f3a3d393e' with
+	the parameters "thold=8'h3f,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_cascade' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "input_size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fork_param' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rom_layer' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "w_size=8,neurons_in=8,neurons_out=2,rom_mem=128'h5515170842cec80f081034341a64e921". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/network/rom_layer.sv:31: signed to unsigned assignment occurs. (VER-318)
+Statistics for MUX_OPs
+=============================================================
+|  block name/line   | Inputs | Outputs | # sel inputs | MB |
+=============================================================
+| rom_layer_8_8_2/39 |   8    |   16    |      3       | N  |
+=============================================================
+Presto compilation completed successfully.
+Information: Building the design 'neuron' instantiated from design 'layer_8_8_2_7f7f' with
+	the parameters "thold=8'h7f,data_bits=8,delay_v=64'h0000000100000001". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron.sv:11: Default value of the sized parameter 'thold' has been overridden with an expression whose self-determined type is not as wide as the parameter. (ELAB-2029)
+Presto compilation completed successfully.
+Information: Building the design 'arbiter_2b_rev3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'delay_1b' instantiated from design 'delay_delay10' with
+	the parameters "delay=10". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'fork_param_size8' with
+	the parameters "size=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_ctrl' instantiated from design 'neuron_3e_8_0000000100000001' with
+	the parameters "delay_v=64'h0000000100000001". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3e_8_0000000100000001' with
+	the parameters "thold=63,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'delay'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_39_8_0000000100000001' with
+	the parameters "thold=58,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3d_8_0000000100000001' with
+	the parameters "thold=62,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3a_8_0000000100000001' with
+	the parameters "thold=59,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_3f_8_0000000100000001' with
+	the parameters "thold=64,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt' instantiated from design 'fork_param_size2' with
+	the parameters "size=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'neuron_data' instantiated from design 'neuron_7f_8_0000000100000001' with
+	the parameters "thold=128,data_bits=8". (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:62: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:66: signed to unsigned assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/neuron/neuron_data.sv:76: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'mutex'. (HDL-193)
+Warning:  /tp/xph2sei/xph2sei403/MiniProjet/rtl/async_lib/mutex.sv:15: Netlist for always_ff block does not contain a flip-flop. (ELAB-976)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'muller_synt_2b' instantiated from design 'muller_synt_size8' with
+	the parameters "rst_set=1'h0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ctrl'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ctrl_rst_on'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'join_param' instantiated from design 'neuron_c

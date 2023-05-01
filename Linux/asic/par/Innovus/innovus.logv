@@ -1,0 +1,67 @@
+[04/26 18:42:40      0s] 
+[04/26 18:42:40      0s] Cadence Innovus(TM) Implementation System.
+[04/26 18:42:40      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/26 18:42:40      0s] 
+[04/26 18:42:40      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[04/26 18:42:40      0s] Options:	
+[04/26 18:42:40      0s] Date:		Wed Apr 26 18:42:40 2023
+[04/26 18:42:40      0s] Host:		cimeld29.cime.inpg.fr (x86_64 w/Linux 3.10.0-1160.76.1.el7.x86_64) (8cores*16cpus*Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz 16384KB)
+[04/26 18:42:40      0s] OS:		Red Hat Enterprise Linux Server release 7.9 (Maipo)
+[04/26 18:42:40      0s] 
+[04/26 18:42:40      0s] License:
+[04/26 18:42:40      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[04/26 18:42:40      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/26 18:42:47      6s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[04/26 18:42:47      6s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[04/26 18:42:47      6s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[04/26 18:42:47      6s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[04/26 18:42:47      6s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[04/26 18:42:47      6s] @(#)CDS: CPE v17.11-s095
+[04/26 18:42:47      6s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[04/26 18:42:47      6s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[04/26 18:42:47      6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[04/26 18:42:47      6s] @(#)CDS: RCDB 11.10
+[04/26 18:42:47      6s] --- Running on cimeld29.cime.inpg.fr (x86_64 w/Linux 3.10.0-1160.76.1.el7.x86_64) (8cores*16cpus*Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz 16384KB) ---
+[04/26 18:42:47      6s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_6259_cimeld29.cime.inpg.fr_xph2sei403_FJuanA.
+
+[04/26 18:42:47      6s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[04/26 18:42:47      6s] 
+[04/26 18:42:47      6s] **INFO:  MMMC transition support version v31-84 
+[04/26 18:42:47      6s] 
+[04/26 18:42:47      6s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/26 18:42:47      6s] <CMD> suppressMessage ENCEXT-2799
+[04/26 18:42:47      6s] <CMD> getDrawView
+[04/26 18:42:47      6s] <CMD> loadWorkspace -name Physical
+[04/26 18:42:47      6s] <CMD> win
+[04/26 18:43:10      8s] <CMD_INTERNAL> print {---# TCL Script amsSetup.tcl loaded}
+[04/26 18:43:10      8s] ---# TCL Script amsSetup.tcl loaded
+[04/26 18:43:40     11s] <CMD> set init_layout_view {}
+[04/26 18:43:40     11s] <CMD> set init_verilog ./INPUT_DATA/filter_io.v
+[04/26 18:43:40     11s] <CMD> set init_mmmc_file ./view_definition.tcl
+[04/26 18:43:40     11s] <CMD> set init_lef_file {/softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/c35b4.lef /softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/CORELIB.lef /softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/IOLIB_4M.lef}
+[04/26 18:43:40     11s] <CMD> set init_top_cell filter_io
+[04/26 18:43:40     11s] <CMD> set init_gnd_net {gnd! gnd3r! gnd3o!}
+[04/26 18:43:40     11s] <CMD> set init_pwr_net {vdd! vdd3r1! vdd3r2! vdd3o!}
+[04/26 18:43:40     11s] <CMD> set cts_cell_list {CLKIN0 CLKIN1 CLKIN2 CLKIN3 CLKIN4 CLKIN6 CLKIN8 CLKIN10 CLKIN12 CLKIN15 CLKBU2 CLKBU4 CLKBU6 CLKBU8 CLKBU12 CLKBU15}
+[04/26 18:45:07     21s] <CMD> set init_verilog {./network_netlist.v ./network_io.sv}
+[04/26 18:45:15     21s] <CMD> set init_layout_view {}
+[04/26 18:45:15     21s] <CMD> set init_verilog ./INPUT_DATA/filter_io.v
+[04/26 18:45:15     21s] <CMD> set init_mmmc_file ./view_definition.tcl
+[04/26 18:45:15     21s] <CMD> set init_lef_file {/softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/c35b4.lef /softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/CORELIB.lef /softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/IOLIB_4M.lef}
+[04/26 18:45:15     21s] <CMD> set init_top_cell filter_io
+[04/26 18:45:15     21s] <CMD> set init_gnd_net {gnd! gnd3r! gnd3o!}
+[04/26 18:45:15     21s] <CMD> set init_pwr_net {vdd! vdd3r1! vdd3r2! vdd3o!}
+[04/26 18:45:15     21s] <CMD> set cts_cell_list {CLKIN0 CLKIN1 CLKIN2 CLKIN3 CLKIN4 CLKIN6 CLKIN8 CLKIN10 CLKIN12 CLKIN15 CLKBU2 CLKBU4 CLKBU6 CLKBU8 CLKBU12 CLKBU15}
+[04/26 18:46:40     30s] <CMD> set init_layout_view {}
+[04/26 18:46:40     30s] <CMD> set init_verilog ./INPUT_DATA/network_io.v
+[04/26 18:46:40     30s] <CMD> set init_mmmc_file ./view_definition.tcl
+[04/26 18:46:40     30s] <CMD> set init_lef_file {/softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/c35b4.lef /softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/CORELIB.lef /softslin/AMS_410_ISR15/cds/HK_C35/LEF/c35b4/IOLIB_4M.lef}
+[04/26 18:46:40     30s] <CMD> set init_top_cell filter_io
+[04/26 18:46:40     30s] <CMD> set init_gnd_net {gnd! gnd3r! gnd3o!}
+[04/26 18:46:40     30s] <CMD> set init_pwr_net {vdd! vdd3r1! vdd3r2! vdd3o!}
+[04/26 18:46:40     30s] <CMD> set cts_cell_list {CLKIN0 CLKIN1 CLKIN2 CLKIN3 CLKIN4 CLKIN6 CLKIN8 CLKIN10 CLKIN12 CLKIN15 CLKBU2 CLKBU4 CLKBU6 CLKBU8 CLKBU12 CLKBU15}
+[04/26 18:46:51     31s] 
+[04/26 18:46:51     31s] *** Memory Usage v#1 (Current mem = 486.227M, initial mem = 187.660M) ***
+[04/26 18:46:51     31s] *** Message Summary: 0 warning(s), 0 error(s)
+[04/26 18:46:51     31s] 
+[04/26 18:46:51     31s] --- Ending "Innovus" (totcpu=0:00:31.5, real=0:04:11, mem=486.2M) ---

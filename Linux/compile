@@ -1,0 +1,65 @@
+# Script to compile all files
+# Designer: Fernando WELZEL
+
+# Setting standard colors to be used in bash plotting
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m' 
+BLUE='\033[0;34m' 
+NC='\033[0m'     # No Color
+
+# Checks operating system and then runs the correct preparation commands
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Execute commands for preparation
+    source $( pwd )/config/config_RTL
+    source $( pwd )/config/config_ASIC
+else
+    # Creates general path to be used in compilation
+    export TP_PATH="$( pwd )"
+fi
+
+echo -e "\n${BLUE} == COMPILING RTL ======================================== ${NC}\n"
+
+# Runs RTL compilation and prints errors if they exist
+std_rtl=`source ${TP_PATH}/rtl/compile_rtl`
+
+if echo "$std_rtl" | grep -Eq "Errors: [1-9]+|Warnings: [1-9]+"; then
+    # If the regular expression is found, print the output the problems in color
+    if echo "$std_rtl" | grep -Eq "Errors: [1-9]+"; then
+        echo -e "${RED}ERRORS FOUND:${NC}"
+        echo "$std_rtl" | grep -E "\*\* Error|Errors: [1-9]+"
+        echo -e ""
+    fi
+    if echo "$std_rtl" | grep -Eq "Warnings: [1-9]+"; then
+        echo -e "${YELLOW}WARNINGS FOUND:${NC}"
+        echo "$std_rtl" | grep -E "\*\* Warning|Warnings: [1-9]+"
+        echo -e ""
+    fi
+else
+    # Sends message that it compiled without errors
+    echo -e "${GREEN}Compiled RTL without errors or warnings!${NC}\n"
+fi
+
+echo -e   "${BLUE} == COMPILING BENCH ====================================== ${NC}\n"
+
+# Runs BENCH compilation and prints errors if they exist
+std_bench=`source ${TP_PATH}/bench/compile_bench`
+
+if echo "$std_bench" | grep -Eq "Errors: [1-9]+|Warnings: [1-9]+"; then
+    # If the regular expression is found, print the output the problems in color
+    if echo "$std_bench" | grep -Eq "Errors: [1-9]+"; then
+        echo -e "${RED}ERRORS FOUND:${NC}"
+        echo "$std_bench" | grep -E "\*\* Error|Errors: [1-9]+"
+        echo -e ""
+    fi
+    if echo "$std_bench" | grep -Eq "Warnings: [1-9]+"; then
+        echo -e "${YELLOW}WARNINGS FOUND:${NC}"
+        echo "$std_bench" | grep -E "\*\* Warning|Warnings: [1-9]+"
+        echo -e ""
+    fi
+else
+    # Sends message that it compiled without errors
+    echo -e "${GREEN}Compiled BENCH without errors or warnings!${NC}\n"
+fi
+
+echo -e   "${BLUE} ========================================================= ${NC}"

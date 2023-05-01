@@ -1,0 +1,10 @@
+# Bash file to run innovus commands
+
+source vars.tcl
+source amsSetup.tcl
+
+source init.tcl
+
+ls
+
+init_design

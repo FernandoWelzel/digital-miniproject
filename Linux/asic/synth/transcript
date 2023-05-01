@@ -1,0 +1,242 @@
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vlib work
+vlog -reportprogress 300 -work work /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:03:11 on Apr 19,2023
+# vlog -reportprogress 300 -work work /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v 
+# -- Compiling module delay_1b_delay1_0
+# -- Compiling module delay_0
+# -- Compiling module muller_synt_2b_0_0
+# -- Compiling module muller_synt_0
+# -- Compiling module ctrl_0
+# -- Compiling module delay_1b_delay1_6
+# -- Compiling module delay_6
+# -- Compiling module muller_synt_2b_0_5
+# -- Compiling module muller_synt_3
+# -- Compiling module ctrl_3
+# -- Compiling module delay_1b_delay1_4
+# -- Compiling module delay_4
+# -- Compiling module muller_synt_2b_0_3
+# -- Compiling module muller_synt_1
+# -- Compiling module ctrl_1
+# -- Compiling module delay_1b_delay1_3
+# -- Compiling module delay_3
+# -- Compiling module muller_synt_2b_1
+# -- Compiling module muller_synt_rst_set1
+# -- Compiling module ctrl_rst_on
+# -- Compiling module delay_1b_delay1_2
+# -- Compiling module delay_2
+# -- Compiling module muller_synt_2b_0_2
+# -- Compiling module muller_synt_size2_0
+# -- Compiling module join_param_size2
+# -- Compiling module delay_1b_delay1_1
+# -- Compiling module delay_1
+# -- Compiling module muller_synt_2b_0_1
+# -- Compiling module muller_synt_size2_1
+# -- Compiling module fork_param_size2
+# -- Compiling module delay_1b_delay1_5
+# -- Compiling module delay_5
+# -- Compiling module muller_synt_2b_0_4
+# -- Compiling module muller_synt_2
+# -- Compiling module ctrl_2
+# -- Compiling module neuron_ctrl_0000000100000001
+# -- Compiling module register_size4_0
+# -- Compiling module register_size4_2
+# -- Compiling module register_size5
+# -- Compiling module register_size4_1
+# -- Compiling module register
+# -- Compiling module mux_data_bits4_sel_bits1
+# -- Compiling module neuron_data_thold8_data_bits4
+# -- Compiling module neuron
+# 
+# Top level modules:
+# 	neuron
+# End time: 19:03:11 on Apr 19,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.muller_synt_0
+# vsim work.muller_synt_0 
+# Start time: 19:03:32 on Apr 19,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(27): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(29): Module 'NOR20' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 19:03:33 on Apr 19,2023, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vsim work.muller_synt_0 -L c35_CORELIB
+# vsim work.muller_synt_0 -L c35_CORELIB 
+# Start time: 19:04:00 on Apr 19,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.muller_synt_0(fast)
+# Loading c35_CORELIB.IMAJ31(fast)
+# Loading c35_CORELIB.NOR20(fast)
+add wave -position insertpoint sim:/muller_synt_0/*
+force -freeze sim:/muller_synt_0/data_in 2'h0 0
+force -freeze sim:/muller_synt_0/rst 1'h0 0
+run
+force -freeze sim:/muller_synt_0/data_in 2'b01 0
+run
+force -freeze sim:/muller_synt_0/data_in 2'b11 0
+run
+force -freeze sim:/muller_synt_0/data_in 2'h1 0
+run
+vsim work.neuron
+# End time: 19:05:49 on Apr 19,2023, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 0
+# vsim work.neuron 
+# Start time: 19:05:49 on Apr 19,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(589): Module 'OAI212' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(27): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(29): Module 'NOR20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(53): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(82): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(84): Module 'NOR21' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(108): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(361): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(363): Module 'NOR21' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(387): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(137): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(139): Module 'NOR20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(163): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(192): Module 'AOI2112' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(193): Module 'OAI212' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(195): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(196): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(220): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(249): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(251): Module 'NOR20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(305): Module 'IMAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(307): Module 'NOR20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(430): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(432): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(434): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(436): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(438): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(448): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(450): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(452): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(454): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(456): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(466): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(468): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(470): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(472): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(474): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(476): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(486): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(488): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(490): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(492): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(494): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(504): Module 'DFC3' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(506): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(519): Module 'MUX21' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(521): Module 'MUX21' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(523): Module 'MUX21' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(525): Module 'MUX21' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(556): Module 'LOGIC0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(557): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(558): Module 'OAI310' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(560): Module 'OAI220' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(561): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(562): Module 'NAND20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(563): Module 'XNR30' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(564): Module 'IMAJ30' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(566): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(567): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(568): Module 'XOR30' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(570): Module 'MAJ31' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(572): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(573): Module 'XNR30' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(575): Module 'NAND20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(577): Module 'XOR20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(595): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(596): Module 'NAND20' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(597): Module 'CLKIN0' is not defined.
+# ** Error: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(598): Module 'CLKIN0' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 19:05:49 on Apr 19,2023, Elapsed time: 0:00:00
+# Errors: 69, Warnings: 0
+vsim work.neuron -L c35_CORELIB
+# vsim work.neuron -L c35_CORELIB 
+# Start time: 19:06:38 on Apr 19,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(430): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[3] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(430): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(432): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[2] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(432): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(434): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[1] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(434): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(436): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[0] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(436): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(448): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[3] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(448): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(450): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[2] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(450): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(452): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[1] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(452): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(454): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[0] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(454): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(466): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[4] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(468): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[3] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(468): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(470): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[2] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(470): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(472): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[1] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(472): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(474): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[0] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(474): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(486): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[3] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(486): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(488): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[2] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(488): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(490): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[1] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(490): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(492): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[0] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(492): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(504): (vopt-2685) [TFMPC] - Too few port connections for '\data_out_reg[0] '.  Expected 5, found 4.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(504): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(552): (vopt-2685) [TFMPC] - Too few port connections for 'register_5'.  Expected 4, found 3.
+# ** Warning: /tp/xph2sei/xph2sei403/MiniProjet/asic/synth/neuron_synth.v(552): (vopt-2718) [TFMPC] - Missing connection for port 'data_out'.
+# Loading work.neuron(fast)
+# Loading c35_CORELIB.OAI212(fast)
+# Loading c35_CORELIB.IMAJ31(fast)
+# Loading c35_CORELIB.NOR20(fast)
+# Loading c35_CORELIB.CLKIN0(fast)
+# Loading c35_CORELIB.NOR21(fast)
+# Loading c35_CORELIB.AOI2112(fast)
+# Loading c35_CORELIB.DFC3(fast)
+# Loading work.mux_data_bits4_sel_bits1(fast)
+# Loading c35_CORELIB.MUX21(fast)
+# Loading c35_CORELIB.OAI310(fast)
+# Loading c35_CORELIB.OAI220(fast)
+# Loading c35_CORELIB.NAND20(fast)
+# Loading c35_CORELIB.XNR30(fast)
+# Loading c35_CORELIB.IMAJ30(fast)
+# Loading c35_CORELIB.XOR30(fast)
+# Loading c35_CORELIB.MAJ31(fast)
+# Loading c35_CORELIB.XOR20(fast)
+add wave -position end sim:/neuron/*
+force -freeze sim:/neuron/data_in 4'h0 0
+force -freeze sim:/neuron/req_in 1'h0 0
+force -freeze sim:/neuron/rst 1'h0 0
+force -freeze sim:/neuron/ack_out 1'h0 0
+run
+# End time: 19:09:51 on Apr 19,2023, Elapsed time: 0:03:13
+# Errors: 0, Warnings: 38
